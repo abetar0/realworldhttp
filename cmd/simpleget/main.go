@@ -11,6 +11,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	log.Println("Status:", resp.Status)
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
